@@ -1,0 +1,47 @@
+---
+// Picture.astro
+export interface Props {
+  src: string;
+  srcMobile?: string;
+  alt?: string;
+  class?: string;
+  pictureClass?: string;
+  width?: number;
+  height?: number;
+  lazyDisable?: boolean;
+}
+
+const isSvg = src.endsWith('.svg');
+const mimeType = src.endsWith('.webp') ? 'image/webp'
+             : src.endsWith('.jpg') || src.endsWith('.jpeg') ? 'image/jpeg'
+             : src.endsWith('.png') ? 'image/png'
+             : '';
+---
+
+{isSvg ? (
+  <img
+    src={src}
+    alt={alt ?? ''}
+    class={class}
+    width={width}
+    height={height}
+    loading={lazyDisable ? undefined : 'lazy'}
+  />
+) : (
+  <picture class={pictureClass}>
+    <source
+      srcset={srcMobile ?? src}
+      type={mimeType}
+      media="(max-width: 600px)"
+    />
+    <img
+      src={src}
+      alt={alt ?? ''}
+      class={class}
+      width={width}
+      height={height}
+      style={width && height ? `aspect-ratio: ${width} / ${height}` : undefined}
+      loading={lazyDisable ? undefined : 'lazy'}
+    />
+  </picture>
+)}

@@ -1,0 +1,9 @@
+@use "tailwindcss";
+
+@use "./props/media";
+@use "./props/colors";
+@use "./props/fonts";
+
+@use "./global/layout";
+
+@use "./components/rich-text";

@@ -1,0 +1,19 @@
+@layer components {
+    .rich-text {
+      h1, h2, h3 {
+        @apply font-bold mt-6 mb-4;
+      }
+  
+      p {
+        @apply mb-10;
+      }
+  
+      ul {
+        @apply list-disc pl-6 mb-4;
+      }
+  
+      a {
+        @apply text-blue-600 underline hover:text-blue-800;
+      }
+    }
+  }
