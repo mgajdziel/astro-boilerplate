@@ -1,8 +1,13 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import GuideNav from '../components/helpers/GuideNav.astro';
+
+export const internalNav = {
+	title: '',
+	navInclude: true
+};
 ---
 
-<Layout>
-	<Welcome />
+<Layout metaTitle="Page List">
+	<GuideNav />
 </Layout>

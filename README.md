@@ -19,7 +19,7 @@ Inside of your Astro project, you'll see the following folders and files:
 ```text
 /
 ├── public/
-│   └── favicon.svg
+│   └── favicon.ico
 ├── src/
 │   ├── layouts/
 │   │   └── Layout.astro
@@ -46,3 +46,8 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+
+## Additional info
+
+In the current moment you need to save global.scss manually, after change any partial included.

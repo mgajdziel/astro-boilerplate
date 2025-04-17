@@ -1,0 +1,31 @@
+---
+interface PageNav {
+    internalNav: {
+        title: string;
+        navInclude?: boolean;
+    };
+}
+
+const modules = import.meta.glob<PageNav>('/src/pages/*.astro', { eager: true });
+
+const navItems = Object.entries(modules)
+    .map(([path, module]) => {
+            return {
+                title: module.internalNav?.title,
+                include: module.internalNav?.navInclude,
+                url: path
+                    .replace('/src/pages', '')
+                    .replace(/\.astro$/, '')
+                    .replace(/\/index$/, '/')
+            };
+    })
+    .filter(item => item.include);
+---
+
+<nav>
+    <ul>
+        {navItems.map(item => (
+        <li><a href={item.url}>{item.title}</a></li>
+        ))}
+    </ul>
+</nav>

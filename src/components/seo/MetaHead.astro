@@ -1,0 +1,40 @@
+---
+export interface Props {
+  metaTitle?: string
+  metaDescription?: string
+  metaImage?: string
+  metaUrl?: string
+}
+
+const {
+  metaTitle = 'PGJ Static Site',
+  metaDescription = `${metaTitle} - PGJ Static Page powered by ADHDEV`,
+  metaImage = '/social-preview.webp', // recommended size: 1200x630
+  metaUrl = 'https://pgjonline.com/',
+} = Astro.props
+---
+
+<meta name="description" content={metaDescription} />
+<title>{metaTitle}</title>
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+<link rel="shortcut icon" href="favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+<link rel="manifest" href="favicon/site.webmanifest" />
+<meta name="theme-color" content="#ffffff" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={metaUrl} />
+<meta property="og:title" content={metaTitle} />
+<meta property="og:description" content={metaDescription} />
+<meta property="og:image" content={metaImage} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={metaUrl} />
+<meta name="twitter:title" content={metaTitle} />
+<meta name="twitter:description" content={metaDescription} />
+<meta name="twitter:image" content={metaImage} />

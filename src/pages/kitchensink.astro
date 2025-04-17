@@ -1,8 +1,13 @@
 ---
 import KitchenSink from "../components/KitchenSink.astro";
 import Layout from "../layouts/Layout.astro";
+
+export const internalNav = {
+  title: 'Kitchen Sink',
+  navInclude: true
+};
 ---
 
-<Layout>
+<Layout metaTitle="Kitchen Sink">
     <KitchenSink />
 <Layout />
