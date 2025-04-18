@@ -1,0 +1,38 @@
+---
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/controller';
+---
+
+<section class="flex flex-col md:flex-row gap-4">
+  <!-- Image Swiper -->
+  <div class="swiper image-swiper w-full md:w-1/2">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="/images/weld1.jpg" alt="" class="w-full h-full object-cover" />
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/weld2.jpg" alt="" class="w-full h-full object-cover" />
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/weld3.jpg" alt="" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Text Swiper -->
+  <div class="swiper text-swiper w-full md:w-1/2">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide p-6 bg-gray-100 font-bold text-xl">
+        Lorem ipsum dolor sit amet.
+      </div>
+      <div class="swiper-slide p-6 bg-gray-100 font-bold text-xl">
+        Sed do eiusmod tempor incididunt.
+      </div>
+      <div class="swiper-slide p-6 bg-gray-100 font-bold text-xl">
+        Consectetur adipiscing elit.
+      </div>
+    </div>
+  </div>
+</section>
