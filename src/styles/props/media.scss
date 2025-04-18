@@ -1,10 +1,12 @@
 @use "../global/functions" as *;
 
-$container-lg: rem(1296);
-$container-sm: rem(950);
+$container-xl: rem(1296);
+$container-lg: rem(950);
+$container-sm: rem(750);
 $container-padding: rem(19);
 
 @theme {
+    --container-xl: #{$container-xl};
     --container-lg: #{$container-lg};
     --container-sm: #{$container-sm};
     --container-padding: #{$container-padding};

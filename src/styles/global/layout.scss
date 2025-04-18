@@ -1,13 +1,19 @@
 @layer utilities {
+    .container-sm {
+        max-width: var(--container-sm);
+        margin-inline: auto;
+        padding-inline: var(--container-padding);
+    }
+
     .container-lg {
         max-width: var(--container-lg);
         margin-inline: auto;
         padding-inline: var(--container-padding);
     }
-    
-    .container-sm {
-        max-width: var(--container-lg);
+
+    .container-xl {
+        max-width: var(--container-xl);
         margin-inline: auto;
         padding-inline: var(--container-padding);
     }
-}
+} 
