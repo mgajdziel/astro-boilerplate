@@ -1,0 +1,48 @@
+@import  "tailwindcss";
+@import  "./props/fonts";
+
+@theme {
+    --font-sans: 'Fira Sans', sans-serif;
+    --font-display: 'Bitter', var(--font-sans);
+    /* Colors */
+    --text-xxs: .75rem;
+    --text-xxs--line-height: 1.666;
+    --text-xs: .8125rem;
+    --text-xs--line-height: 1.23;
+    --text-sm: .9375rem;
+    --text-sm--line-height: 1.333;
+    --text-base: 1.125rem;
+    --text-base--line-height: 1.444;
+    --text-lg: 1.25rem;
+    --text-lg--line-height: 1.2;
+    --text-xl: 1.375rem;
+    --text-xl--line-height: 1.23;
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: 1.25;
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: 1.151;
+    --text-4xl: 2.375rem;
+    --text-4xl--line-height: 1.157;
+    /* Colors */
+    --color-brand: #DC2A40;
+    --color-brand-dark: #811A26;
+    --color-gray: #757575;
+    --color-gray-light: #EEEEEE;
+    /* Containers  */
+    --container-xl: 81rem;
+    --container-lg: 59.375rem;
+    --container-sm: 46.875rem;
+    --container-padding: 1.1875rem;
+}
+
+@layer base {
+
+}
+
+@layer components {
+    
+}
+
+@layer utilities {
+    
+}
